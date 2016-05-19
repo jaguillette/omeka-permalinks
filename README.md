@@ -1,0 +1,4 @@
+# omeka-permalinks
+This plugin was set up for a URN creation system that allows for HTTP GET parameters to be kept as the URN resolves to a functional URL. So a urn nrs.institution.edu/identifier?route=exhibits/browse can resolve to omekasite.com?route=exhibits/browse. What this plugin does is create a parameter to be passed through the HTTP GET that contains the route information that Omeka uses to structure its pages, and also resolves that HTTP GET parameter, when present, into a redirect to the appropriate Omeka page.
+
+In simpler terms, if you have a Name Resolution Service that preserves HTTP GET information (nrs.institution.edu/identifier?route=exhibits/browse can resolve to omekasite.com?route=exhibits/browse), this plugin will go one step further, and allow nrs.institution.edu/identifier?route=exhibits/browse to connect to omekasite.com/exhibits/browse, so you can use one URN for an entire Omeka site, and the names will resolve automatically.
