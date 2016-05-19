@@ -21,7 +21,9 @@ class PermalinksPlugin extends Omeka_Plugin_AbstractPlugin
 	public function hookPublicHead($args)
 	{
 		if (isset($_GET['route'])) {
-			$redirect_url = absolute_url($_GET['route']);
+			$redirectRoute = $_GET['route'];
+			unset($_GET['route']);
+			$redirect_url = absolute_url($redirectRoute, $_GET);
 			echo '<meta http-equiv="refresh" content="0;URL='.$redirect_url.'">';
 		}
 	}
